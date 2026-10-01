@@ -1,35 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found — Artificer Made</title>
-<meta name="robots" content="noindex">
-<meta name="color-scheme" content="light dark">
-<link rel="icon" href="/mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Artificer Made</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="/" aria-label="Artificer Made home">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="10" fill="var(--accent)"/><path d="M15 33 24 14l9 19M18.5 26.5h11" stroke="var(--bg)" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Artificer Made
+<body class="am-home">
+
+<!-- ===================== SHARED HEADER — start =====================
+     Reuse on /hooked/ and /hooked/privacy.html. Needs /style.css
+     sections 1–2. Main content on each page should be <main id="main">. -->
+<a class="am-skip" href="#main">Skip to content</a>
+<header class="am-header">
+  <div class="am-header__inner">
+    <a class="am-wordmark" href="/" aria-label="Artificer Made, home">
+      <svg viewBox="0 0 1024 1024" width="32" height="32" aria-hidden="true" focusable="false"><defs><clipPath id="am-cp"><circle cx="512" cy="412" r="290"/></clipPath><mask id="am-mb" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><rect width="1024" height="1024" fill="#fff"/><g fill="none" stroke="#000" transform="rotate(-28 512 412)"><path d="M271.58,574.17 A290 145 -34 0 0 752.42,249.83" stroke-width="184"/><circle cx="512" cy="412" r="104" fill="#000" stroke="none"/></g></mask><mask id="am-mf" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><rect width="1024" height="1024" fill="#fff"/><path d="M271.58,574.17 A290 145 -34 0 0 752.42,249.83" fill="none" stroke="#000" stroke-width="184" transform="rotate(-28 512 412)"/></mask></defs><g fill="none" stroke="currentColor"><g fill="currentColor" stroke="none"><rect x="466" y="702" width="92" height="128"/><rect x="312" y="830" width="400" height="100" rx="24"/></g><g mask="url(#am-mb)"><path d="M512,50 V774" stroke-width="76" transform="rotate(-28 512 412)"/></g><g clip-path="url(#am-cp)"><g transform="rotate(-28 512 412)"><g mask="url(#am-mb)"><path d="M271.58,574.17 A290 145 -34 0 1 752.42,249.83" stroke-width="57.2"/></g><g mask="url(#am-mf)"></g><path d="M271.58,574.17 A290 145 -34 0 0 752.42,249.83" stroke-width="104"/></g></g><circle cx="512" cy="412" r="290" stroke-width="88"/><circle cx="512" cy="412" r="64" fill="currentColor" stroke="none"/></g></svg>
+      <span>artificer made</span>
     </a>
+    <nav class="am-nav" aria-label="Main">
+      <ul>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
-<main id="main">
-  <div class="wrap doc">
-    <h1>That page isn't here.</h1>
-    <p class="sub">The link may be old or mistyped.</p>
-    <p><a href="/">Artificer Made home</a> · <a href="/hooked/">Hooked help</a> · <a href="/hooked/privacy.html">Hooked privacy policy</a></p>
-  </div>
+<!-- ===================== SHARED HEADER — end ======================= -->
+
+<main id="main" tabindex="-1">
+  <section class="am-hero" aria-labelledby="nf-title">
+    <div class="am-wrap">
+      <h1 id="nf-title">This page isn’t here.</h1>
+      <p>It may have moved, or the link may have a typo. The <a href="/">home page</a> and <a href="/hooked/">Hooked help</a> are good places to start, or write to <a href="mailto:hello@artificermade.com">hello@artificermade.com</a>.</p>
+    </div>
+  </section>
 </main>
-<footer class="site">
-  <div class="wrap">
-    <span>© 2026 Artificer Made LLC</span>
-    <span><a href="mailto:hello@artificermade.com">hello@artificermade.com</a></span>
+
+<!-- ===================== SHARED FOOTER — start ===================== -->
+<footer class="am-footer">
+  <div class="am-footer__inner">
+    <div class="am-footer__top">
+      <p>&copy; 2026 Artificer Made LLC</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="/hooked/">Hooked</a></li>
+          <li><a href="/hooked/privacy.html">Privacy policy</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p>This website uses no cookies and collects no information.</p>
   </div>
 </footer>
+<!-- ===================== SHARED FOOTER — end ======================= -->
+
 </body>
 </html>

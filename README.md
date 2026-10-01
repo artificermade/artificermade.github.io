@@ -6,10 +6,14 @@ The website for Artificer Made LLC, served by GitHub Pages from this repository 
 
 | Path | What it is | Edited where |
 | --- | --- | --- |
-| `index.html`, `style.css`, `mark.svg`, `404.html` | The company pages | Here, by hand |
+| `index.html`, `style.css`, `404.html` | The company pages. The header and footer sit between `SHARED HEADER/FOOTER` comments so other pages can reuse them | Here, by hand |
+| `assets/` | The Hooked icons on the home page card (light and dark) | Here |
+| `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `site.webmanifest` | The company mark as browser and home-screen icons | Here |
+| `og-image.png` | The preview image shown when the site is shared (1200×630) | Here |
+| `robots.txt`, `sitemap.xml`, `.well-known/security.txt` | Site metadata. `security.txt` has an `Expires` date to renew each year | Here |
 | `hooked/` | Hooked's help page and privacy policy | Generated in the Hooked app's repository; do not edit here |
 | `CNAME` | The custom domain for GitHub Pages | Here |
-| `.nojekyll` | Tells Pages to serve the files as they are | Here |
+| `.nojekyll` | Tells Pages to serve the files as they are, including `.well-known/` | Here |
 | `scripts/`, `docs/go-live.md` | First-time publishing, the DNS steps, and a check that the site is live | Here |
 
 The site is plain HTML and CSS. It loads no scripts, fonts, or third-party resources, and sets no cookies.

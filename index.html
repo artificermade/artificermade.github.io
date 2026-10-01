@@ -1,101 +1,146 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Artificer Made — small, careful apps for iPhone and iPad</title>
-<meta name="description" content="Artificer Made LLC is a one-person software company in Arkansas. It makes calm, private apps for iPhone and iPad, starting with Hooked, a home for your crochet patterns.">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#FBF7F1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1C1A17" media="(prefers-color-scheme: dark)">
-<link rel="canonical" href="https://artificermade.com/">
-<link rel="icon" href="mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artificer Made</title>
+  <meta name="description" content="Artificer Made is a one-person software company in Arkansas. Each app is made to be calm, private, and pleasant to use.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FBF7F1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C1A17" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://artificermade.com/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Artificer Made">
+  <meta property="og:title" content="Artificer Made">
+  <meta property="og:description" content="Small, careful apps for iPhone and iPad, made by one person in Arkansas.">
+  <meta property="og:url" content="https://artificermade.com/">
+  <meta property="og:image" content="https://artificermade.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="An armillary sphere beside the words artificer made.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
+<body class="am-home">
 
-<!-- shared header: start -->
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="/" aria-label="Artificer Made home">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="10" fill="var(--accent)"/><path d="M15 33 24 14l9 19M18.5 26.5h11" stroke="var(--bg)" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Artificer Made
+<!-- ===================== SHARED HEADER — start =====================
+     Reuse on /hooked/ and /hooked/privacy.html. Needs /style.css
+     sections 1–2. Main content on each page should be <main id="main">. -->
+<a class="am-skip" href="#main">Skip to content</a>
+<header class="am-header">
+  <div class="am-header__inner">
+    <a class="am-wordmark" href="/" aria-label="Artificer Made, home">
+      <svg viewBox="0 0 1024 1024" width="32" height="32" aria-hidden="true" focusable="false"><defs><clipPath id="am-cp"><circle cx="512" cy="412" r="290"/></clipPath><mask id="am-mb" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><rect width="1024" height="1024" fill="#fff"/><g fill="none" stroke="#000" transform="rotate(-28 512 412)"><path d="M271.58,574.17 A290 145 -34 0 0 752.42,249.83" stroke-width="184"/><circle cx="512" cy="412" r="104" fill="#000" stroke="none"/></g></mask><mask id="am-mf" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><rect width="1024" height="1024" fill="#fff"/><path d="M271.58,574.17 A290 145 -34 0 0 752.42,249.83" fill="none" stroke="#000" stroke-width="184" transform="rotate(-28 512 412)"/></mask></defs><g fill="none" stroke="currentColor"><g fill="currentColor" stroke="none"><rect x="466" y="702" width="92" height="128"/><rect x="312" y="830" width="400" height="100" rx="24"/></g><g mask="url(#am-mb)"><path d="M512,50 V774" stroke-width="76" transform="rotate(-28 512 412)"/></g><g clip-path="url(#am-cp)"><g transform="rotate(-28 512 412)"><g mask="url(#am-mb)"><path d="M271.58,574.17 A290 145 -34 0 1 752.42,249.83" stroke-width="57.2"/></g><g mask="url(#am-mf)"></g><path d="M271.58,574.17 A290 145 -34 0 0 752.42,249.83" stroke-width="104"/></g></g><circle cx="512" cy="412" r="290" stroke-width="88"/><circle cx="512" cy="412" r="64" fill="currentColor" stroke="none"/></g></svg>
+      <span>artificer made</span>
     </a>
-    <nav class="site" aria-label="Page">
-      <a href="#apps">Apps</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <nav class="am-nav" aria-label="Main">
+      <ul>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
-<!-- shared header: end -->
+<!-- ===================== SHARED HEADER — end ======================= -->
 
-<main id="main">
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap">
-      <h1 id="hero-title">Small, careful apps for <em>iPhone and iPad</em>.</h1>
-      <p class="lede">Artificer Made is a one-person software company in Arkansas. Each app is made to be calm, private, and pleasant to use.</p>
+<main id="main" tabindex="-1">
+
+  <section class="am-hero" aria-labelledby="hero-title">
+    <div class="am-wrap">
+      <h1 id="hero-title">Small, careful apps for iPhone and iPad.</h1>
+      <p>Artificer Made is a one-person software company in Arkansas. Each app is made to be calm, private, and pleasant to use.</p>
     </div>
   </section>
 
-  <section id="apps" aria-labelledby="apps-title">
-    <div class="wrap">
-      <h2 id="apps-title">Apps</h2>
-      <div class="apps">
-        <article class="card app">
-          <img class="app-icon" src="hooked/icon.png" alt="" width="96" height="96">
-          <div>
-            <h3>Hooked</h3>
-            <p>A calm home for your crochet patterns. Bring in your PDFs and Hooked sorts, tags and keeps them, ready to read with yarn in your hands.</p>
-            <ul class="pills" aria-label="At a glance">
-              <li>Free, no ads</li><li>No account</li><li>Private by design</li><li>Syncs with your iCloud</li>
-            </ul>
-            <p class="status">Coming soon to the App Store for iPhone and iPad.</p>
-            <p class="links"><a class="btn" href="hooked/">Help and support</a> <a href="hooked/privacy.html">Privacy policy</a></p>
-          </div>
-        </article>
+  <section class="am-section" id="apps" aria-labelledby="apps-title">
+    <div class="am-wrap">
+      <div class="am-section__head">
+        <h2 id="apps-title">Apps</h2>
       </div>
+
+      <!-- Add a second app as another <li class="am-app"> — the grid makes room. -->
+      <ul class="am-apps">
+        <li class="am-app">
+          <div class="am-app__id">
+            <picture>
+              <source srcset="assets/hooked-icon-dark.png" media="(prefers-color-scheme: dark)">
+              <img class="am-app__icon" src="assets/hooked-icon.png" width="72" height="72" alt="Hooked app icon">
+            </picture>
+            <h3>Hooked</h3>
+          </div>
+          <p class="am-app__line">A calm home for your crochet patterns. Bring in your PDFs and Hooked sorts, tags and keeps them, ready to read with yarn in your hands.</p>
+          <ul class="am-facts" aria-label="About Hooked">
+            <li>Free, no ads</li>
+            <li>No account</li>
+            <li>Private by design</li>
+            <li>Syncs with your iCloud</li>
+          </ul>
+          <p class="am-app__status">Coming soon to the App Store for iPhone and iPad.</p>
+          <ul class="am-app__links">
+            <li><a href="/hooked/">Help and support</a></li>
+            <li><a href="/hooked/privacy.html">Privacy policy</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <section id="about" class="band" aria-labelledby="about-title">
-    <div class="wrap">
-      <h2 id="about-title">How the apps are made</h2>
-      <div class="grid">
-        <article class="card">
+  <section class="am-section" id="about" aria-labelledby="about-title">
+    <div class="am-wrap">
+      <div class="am-section__head">
+        <h2 id="about-title">How the apps are made</h2>
+      </div>
+      <ul class="am-principles">
+        <li>
           <h3>Your data stays yours</h3>
           <p>No accounts, no ads, no analytics, no tracking. What you make stays on your devices and in your own iCloud.</p>
-        </article>
-        <article class="card">
+        </li>
+        <li>
           <h3>Free means free</h3>
           <p>No subscriptions and nothing locked behind a payment. An optional tip jar never unlocks anything.</p>
-        </article>
-        <article class="card">
+        </li>
+        <li>
           <h3>One person, answering email</h3>
           <p>Every message is read by the person who writes the code.</p>
-        </article>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <section id="contact" aria-labelledby="contact-title">
-    <div class="wrap">
-      <h2 id="contact-title">Get in touch</h2>
-      <p class="sub">Questions, bug reports, or requests about your data are all welcome.</p>
-      <p class="email"><a href="mailto:hello@artificermade.com">hello@artificermade.com</a></p>
+  <section class="am-section am-contact" id="contact" aria-labelledby="contact-title">
+    <div class="am-wrap">
+      <div class="am-section__head">
+        <h2 id="contact-title">Get in touch</h2>
+        <p>Questions, bug reports, or requests about your data are all welcome.</p>
+      </div>
+      <a class="am-email" href="mailto:hello@artificermade.com">hello@artificermade.com</a>
     </div>
   </section>
+
 </main>
 
-<!-- shared footer: start -->
-<footer class="site">
-  <div class="wrap">
-    <span>© 2026 Artificer Made LLC</span>
-    <span><a href="hooked/">Hooked</a> · <a href="hooked/privacy.html">Privacy policy</a> · <a href="#contact">Contact</a></span>
-    <span class="quiet">This website uses no cookies and collects no information.</span>
+<!-- ===================== SHARED FOOTER — start ===================== -->
+<footer class="am-footer">
+  <div class="am-footer__inner">
+    <div class="am-footer__top">
+      <p>&copy; 2026 Artificer Made LLC</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="/hooked/">Hooked</a></li>
+          <li><a href="/hooked/privacy.html">Privacy policy</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p>This website uses no cookies and collects no information.</p>
   </div>
 </footer>
-<!-- shared footer: end -->
+<!-- ===================== SHARED FOOTER — end ======================= -->
+
 </body>
 </html>
