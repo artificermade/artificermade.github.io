@@ -48,4 +48,4 @@ gh api -X PUT repos/artificermade/artificermade.github.io/pages -F https_enforce
 bash scripts/check-live.sh
 ```
 
-`check-live.sh` prints `PASS` when both `https://artificermade.com` and `https://www.artificermade.com` serve the site, the Hooked pages load, and the mail records are unchanged.
+`check-live.sh` prints `PASS` when both `https://artificermade.com` and `https://www.artificermade.com` serve the site, the Hooked pages load, the `A`, `AAAA` and `www` records point at GitHub Pages, and the mail records match: both `MX` records, the SPF and Apple domain `TXT` records, the DKIM `CNAME`, and a DMARC record of any policy.

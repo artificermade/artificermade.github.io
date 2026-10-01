@@ -27,6 +27,16 @@ else
 fi
 
 step "3/4 push main"
+# Refuse to push anything but this site to anywhere but its repository.
+origin_url="$(git -C "$HERE" remote get-url origin)"
+case "$origin_url" in
+  *"github.com:${REPO}.git"|*"github.com/${REPO}.git"|*"github.com/${REPO}") : ;;
+  *) echo "FAIL: origin is $origin_url, not $REPO" >&2; exit 1 ;;
+esac
+if [ "$(cat "$HERE/CNAME" 2>/dev/null)" != "artificermade.com" ]; then
+  echo "FAIL: $HERE/CNAME is not artificermade.com; this is not the site checkout" >&2
+  exit 1
+fi
 git -C "$HERE" push --no-follow-tags -u origin main:refs/heads/main
 local_sha="$(git -C "$HERE" rev-parse main)"
 remote_sha="$(git -C "$HERE" ls-remote origin refs/heads/main | cut -f1)"
