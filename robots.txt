@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /README.md
+Disallow: /docs/
+Disallow: /scripts/
 
 Sitemap: https://artificermade.com/sitemap.xml

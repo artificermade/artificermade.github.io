@@ -20,7 +20,7 @@ The site is plain HTML and CSS. It loads no scripts, fonts, or third-party resou
 
 Three things to know before adding a file:
 
-- **Everything in this repository is published.** GitHub Pages serves the repository root as it is, so `README.md`, `docs/`, and `scripts/` are reachable on the site too. Keep anything not meant for the public out of this repository.
+- **Everything in this repository is published.** GitHub Pages serves the repository root as it is, so `README.md`, `docs/`, and `scripts/` are reachable on the site too. `robots.txt` asks crawlers to skip those three paths so they stay out of search results; it does not hide them. Keep anything not meant for the public out of this repository, and add a `Disallow` line for any new maintenance folder.
 - **The site itself collects nothing, but the host does.** GitHub Pages logs visitor IP addresses. The footer says so; keep it true if the host changes.
 - **The PNG icons keep the content-credentials block the design tool wrote.** It names the tool, not a person. `favicon.svg` had its copy removed for size.
 
