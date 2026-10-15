@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Checks that the site is live and that mail was left alone.
+# Checks that the site is live and that the mail records are the expected Google Workspace ones.
 # Usage: scripts/check-live.sh            checks https://artificermade.com and DNS
 #        scripts/check-live.sh <base-url> checks the pages at another address (for example a local preview) and skips DNS
 # CHECK_DOMAIN overrides the domain, to prove the checks fail against a domain that is not this one.
@@ -46,9 +46,11 @@ else
     "2606:50c0:8000::153 2606:50c0:8001::153 2606:50c0:8002::153 2606:50c0:8003::153"
   same "www CNAME" "$(records CNAME "www.$DOMAIN")" "artificermade.github.io."
 
-  same "mail: MX records" "$(records MX "$DOMAIN")" "10 mx01.mail.icloud.com. 10 mx02.mail.icloud.com."
-  same "mail: SPF and Apple domain TXT" "$(records TXT "$DOMAIN")" \
-    "apple-domain=pz6OQkxjVZNskHKA v=spf1 include:icloud.com ~all"
+  # Mail moved from iCloud to Google Workspace on 2026-10-15. The Apple TXT and
+  # the iCloud DKIM CNAME are leftovers until Google's DKIM key replaces them.
+  same "mail: MX records" "$(records MX "$DOMAIN")" "1 smtp.google.com."
+  same "mail: SPF, Google and Apple domain TXT" "$(records TXT "$DOMAIN")" \
+    "apple-domain=pz6OQkxjVZNskHKA google-site-verification=MMBHfrZ5KwyO4fDGtkOHG2jkM6w3SVx3VquLFEEeggA v=spf1 include:_spf.google.com ~all"
   same "mail: DKIM CNAME" "$(records CNAME "sig1._domainkey.$DOMAIN")" \
     "sig1.dkim.artificermade.com.at.icloudmailadmin.com."
   dmarc="$(records TXT "_dmarc.$DOMAIN")"
