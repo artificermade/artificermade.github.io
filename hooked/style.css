@@ -31,7 +31,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outli
 header.site { padding: 18px 0; }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font: 700 22px var(--font); }
-.brand svg { width: 34px; height: 34px; }
+.brand img { width: 34px; height: 34px; border-radius: 22.37%; }
 nav.site a { color: var(--text-2); text-decoration: none; margin-left: 18px; font-weight: 500; }
 nav.site a:hover { color: var(--text); }
 
@@ -77,6 +77,10 @@ section p.sub { color: var(--text-2); margin: 0 0 26px; max-width: 60ch; }
 .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700; padding: 14px 22px; border-radius: 999px; }
 .btn[aria-disabled="true"] { background: var(--grouped); color: var(--text-3); pointer-events: none; }
 .note { background: var(--mustard-bg); color: var(--text); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 15px; }
+/* Former inline styles: the page's Content-Security-Policy allows stylesheets only. */
+.contact-label { margin: 0 0 8px; color: var(--text); }
+.contact-line { margin: 0 0 14px; }
+.note.flat { margin: 0; }
 
 footer.site { padding: 36px 0 48px; color: var(--text-3); font-size: 14px; border-top: 1px solid var(--line); margin-top: 20px; }
 footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
